@@ -34,6 +34,9 @@ int nio = input.nextInt();
 
 System.out.println("tioende nummret?");
 int tio = input.nextInt();
+int tal = ett+tva+tre+fyra+fem+sex+sju+atta+nio+tio;
+int medelvardet = tal / 10;
+
 
 if (ett>tva && ett>tre && ett>fyra && ett>fem && ett>sex && ett>sju && ett>atta && ett>nio && ett>tio) {
 	System.out.println("Största talet är " + ett);
@@ -97,6 +100,7 @@ if (nio<ett && nio<tva && nio<tre && nio<fyra && nio<fem && nio<sex && nio<sju &
 if (tio<ett && tio<tva && tio<tre && tio<fyra && tio<fem && tio<sex && tio<sju && tio<atta && tio<nio) {
 	System.out.println("Minsta talet är " + tio);
 }
+System.out.println("Medelvärdet är " + medelvardet);
 }
 }
 
