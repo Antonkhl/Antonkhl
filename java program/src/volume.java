@@ -5,16 +5,17 @@ public class volume {
 
 public static void main(String[] args) {
 	
-	volome(40);
+	volume(100.0);
 }
 
-public static void volome(double radius) {
+public static double volume(double radius) {
 	
-	double radien = radius*radius*radius;
-	double volym1 = radien*3.14*4;
-	double volym2 = volym1 % 3;
+	double radius1 = radius*radius*radius;
+	double radius2 = 4*3.14*radius1;
+	double volome1 = radius2/3;
 	
-	System.out.println("volymen är " + volym2);
+	System.out.println(volome1);
 	
+	return 1;
 	}
 }
