@@ -5,7 +5,7 @@ public class volume {
 
 public static void main(String[] args) {
 	
-	volume(100.0);
+	volume(20.0);
 }
 
 public static double volume(double radius) {
