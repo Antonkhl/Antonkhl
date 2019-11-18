@@ -11,11 +11,12 @@ public class Methoder {
 		System.out.println(fahrenheitToCelcius(50)); // Anropar värdet för fahrenheit
 		System.out.println(kelvinToCelsius(0)); // Anropar värdet för kelvin
 		System.out.println(fluidPressure(FluidTable.WATER, 10));
+		System.out.println(pressureUnderWater(10));
 	}
 	
 	public static double fahrenheitToCelcius(double fahrenheit) {
 		double FatoCe = (fahrenheit-32)*5/9; // Använder formlen för att omvandla värden
-		return FatoCe; //Returnar värdet
+		return FatoCe; //Returner värdet
 	}
 	
 	public static double kelvinToCelsius(double kelvin) {
@@ -24,10 +25,17 @@ public class Methoder {
 	}
 	
 	public static double fluidPressure(FluidTable fluid, double deep) {
-		double FluPre = G*fluid.density*deep;
-		return FluPre;
+		double FluPre = G*fluid.density*deep; //Använder formeln, och jag importerar densiteten från mina enums för att använda för min method
+		return FluPre; //Returnar värdet
 		
 	}
+	
+	public static double pressureUnderWater(double deep) {
+		double PreWat = 997*G*deep;
+		return PreWat;
+	}
+	
+
 	
 
 }
