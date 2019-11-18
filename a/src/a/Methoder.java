@@ -12,6 +12,8 @@ public class Methoder {
 		System.out.println(kelvinToCelsius(0)); // Anropar värdet för kelvin
 		System.out.println(fluidPressure(FluidTable.WATER, 10));
 		System.out.println(pressureUnderWater(10));
+		System.out.println(kineticEnergy(2,2));
+		
 	}
 	
 	public static double fahrenheitToCelcius(double fahrenheit) {
@@ -31,9 +33,18 @@ public class Methoder {
 	}
 	
 	public static double pressureUnderWater(double deep) {
-		double PreWat = 997*G*deep;
-		return PreWat;
+		double PreWat = 997*G*deep; //Här använder jag densiteten för vatten, orsak den frågar om vatten
+		return PreWat; //Returnar värdet
 	}
+		
+	
+	public static double kineticEnergy(double mass, double velocity) {
+		double KiEn = (mass*(velocity*velocity))/2; // Använder formeln, använder velocity*veolicty för det är samma som velocity^2
+		return KiEn; // Returnar värdet
+		
+	}
+	
+	
 	
 
 	
