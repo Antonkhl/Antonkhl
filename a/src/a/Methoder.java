@@ -13,6 +13,7 @@ public class Methoder {
 		System.out.println(fluidPressure(FluidTable.WATER, 10));
 		System.out.println(pressureUnderWater(10));
 		System.out.println(kineticEnergy(2,2));
+		System.out.println(potentialEnergy(2,5));
 		
 	}
 	
@@ -41,6 +42,12 @@ public class Methoder {
 	public static double kineticEnergy(double mass, double velocity) {
 		double KiEn = (mass*(velocity*velocity))/2; // Använder formeln, använder velocity*veolicty för det är samma som velocity^2
 		return KiEn; // Returnar värdet
+		
+	}
+	
+	public static double potentialEnergy(double mass, double height) {
+		double PoEn = mass*G*height; // Använder formlen, 
+		return PoEn; // Returnar värdet
 		
 	}
 	
