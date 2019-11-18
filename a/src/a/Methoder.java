@@ -16,6 +16,7 @@ public class Methoder {
 		System.out.println(potentialEnergy(2,5));
 		System.out.println(fallSpeed(2.5));
 		System.out.println(delta(1,10));
+		System.out.println(volumeToMass(FluidTable.WATER,1));
 
 		
 	}
@@ -64,7 +65,10 @@ public class Methoder {
 		return Result; // Returnar värdet
 	}
 	
-	public static double 
+	public static double volumeToMass(FluidTable fluid, double volume) {
+		double mass = volume*fluid.density; // Omvandlar formeln p = m/v till m = v*p.
+		return mass; // Returnar värdet
+	}
 	
 	
 	
