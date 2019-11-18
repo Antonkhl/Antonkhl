@@ -15,6 +15,7 @@ public class Methoder {
 		System.out.println(kineticEnergy(2,2));
 		System.out.println(potentialEnergy(2,5));
 		System.out.println(fallSpeed(2.5));
+		System.out.println(delta(1,10));
 
 		
 	}
@@ -54,9 +55,16 @@ public class Methoder {
 	}
 	
 	public static double fallSpeed(double height) {
-		double FaSpe = Math.sqrt(2*G*height);
-		return FaSpe;
+		double FaSpe = Math.sqrt(2*G*height); // Använder formlen v^2 = 2as, jag omvandlar formeln då till v = rotenur 2as
+		return FaSpe; // Returnar värdet
 	}
+	
+	public static double delta(double first, double last) {
+		double Result = first-last; //Gör ekvationen
+		return Result; // Returnar värdet
+	}
+	
+	public static double 
 	
 	
 	
