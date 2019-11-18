@@ -14,6 +14,8 @@ public class Methoder {
 		System.out.println(pressureUnderWater(10));
 		System.out.println(kineticEnergy(2,2));
 		System.out.println(potentialEnergy(2,5));
+		System.out.println(fallSpeed(2.5));
+
 		
 	}
 	
@@ -49,6 +51,11 @@ public class Methoder {
 		double PoEn = mass*G*height; // Använder formlen, 
 		return PoEn; // Returnar värdet
 		
+	}
+	
+	public static double fallSpeed(double height) {
+		double FaSpe = Math.sqrt(2*G*height);
+		return FaSpe;
 	}
 	
 	
