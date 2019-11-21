@@ -19,6 +19,7 @@ public class Methoder {
 		System.out.println(volumeToMass(FluidTable.WATER,1));
 		System.out.println(volumeToMass(GasTable.AIR,1));
 		System.out.println(volumeToMass(SolidTable.IRON,1));
+		System.out.println(svtVelocity(10,5));
 
 		
 	}
@@ -82,7 +83,10 @@ public class Methoder {
 		return mass; // Returnar värdet
 	}
 
-	
+	public static double svtVelocity(double distance, double time) {
+		double Velocity = distance/time; //Använder formeln V = S/T
+		return Velocity; // returnar värdet
+	}
 	
 
 	
