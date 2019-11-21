@@ -23,6 +23,7 @@ public class Methoder {
 		System.out.println(svtDistance(10,5));
 		System.out.println(svtTime(10,2));
 		System.out.println(work(50,10));
+		System.out.println(power(1000,2));
 
 		
 	}
@@ -104,6 +105,12 @@ public class Methoder {
 	public static double work(double force, double distance) {
 		double work = force*distance; // Använder formeln = W = Fs * s
 		return work; // returnar värdet 
+	}
+	
+	public static double power(double work, double time) {
+		double power = work/time; // Använder formeln F = W * T
+		return power; // returnar värdet 
+		
 	}
 	
 
