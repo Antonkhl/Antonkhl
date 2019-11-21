@@ -22,6 +22,7 @@ public class Methoder {
 		System.out.println(svtVelocity(10,5));
 		System.out.println(svtDistance(10,5));
 		System.out.println(svtTime(10,2));
+		System.out.println(work(50,10));
 
 		
 	}
@@ -98,6 +99,11 @@ public class Methoder {
 	public static double svtTime(double distance, double velocity) {
 		double Time = distance/velocity; // Omvandlar formeln V = S/T till  T = S/V
 		return Time; // returnar värdet 
+	}
+	
+	public static double work(double force, double distance) {
+		double work = force*distance; // Använder formeln = W = Fs * s
+		return work; // returnar värdet 
 	}
 	
 
