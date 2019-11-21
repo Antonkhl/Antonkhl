@@ -27,8 +27,7 @@ public class Methoder {
 		System.out.println(heat(SolidTable.IRON,1,2));
 		System.out.println(heat(FluidTable.WATER,1,10));
 		System.out.println(heat(GasTable.AIR,1,1));
-
-		
+		System.out.println(velocityToHeight(9.82));
 	}
 	
 	public static double fahrenheitToCelcius(double fahrenheit) {
@@ -130,6 +129,11 @@ public class Methoder {
 		double heat = gas.heatCapacity*mass*deltaT; // Använder formeln E = c * m * DeltaT, där c är värmecapiciteten
 		return heat; // returnar värdet 
 		
+	}
+	
+	public static double velocityToHeight(double velocity) {
+		double VetoHe = (velocity*velocity)/(2*G); //Jag använder formeln MGH = mv^2, jag tar ut M vilket blir GH = v^2/2, Flyttar om G och formeln blir H = v^2/2*G
+		return VetoHe; // returnar värdet 
 	}
 
 
