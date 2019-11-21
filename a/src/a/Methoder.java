@@ -26,6 +26,7 @@ public class Methoder {
 		System.out.println(power(1000,2));
 		System.out.println(heat(SolidTable.IRON,1,2));
 		System.out.println(heat(FluidTable.WATER,1,10));
+		System.out.println(heat(GasTable.AIR,1,1));
 
 		
 	}
@@ -125,6 +126,11 @@ public class Methoder {
 		return heat; // returnar värdet 
 	}
 	
+	public static double heat(GasTable gas, double mass, double deltaT) {
+		double heat = gas.heatCapacity*mass*deltaT; // Använder formeln E = c * m * DeltaT, där c är värmecapiciteten
+		return heat; // returnar värdet 
+		
+	}
 
 
 	
