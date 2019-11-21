@@ -21,6 +21,7 @@ public class Methoder {
 		System.out.println(volumeToMass(SolidTable.IRON,1));
 		System.out.println(svtVelocity(10,5));
 		System.out.println(svtDistance(10,5));
+		System.out.println(svtTime(10,2));
 
 		
 	}
@@ -92,6 +93,11 @@ public class Methoder {
 	public static double svtDistance(double velocity, double time) {
 		double Distance = velocity*time; //Jag omvandlar formeln V = S/T till S = V*T
 		return Distance; // returnar värdet
+	}
+	
+	public static double svtTime(double distance, double velocity) {
+		double Time = distance/velocity; // Omvandlar formeln V = S/T till  T = S/V
+		return Time; // returnar värdet 
 	}
 	
 
