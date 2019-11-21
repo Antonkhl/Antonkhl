@@ -18,6 +18,7 @@ public class Methoder {
 		System.out.println(delta(1,10));
 		System.out.println(volumeToMass(FluidTable.WATER,1));
 		System.out.println(volumeToMass(GasTable.AIR,1));
+		System.out.println(volumeToMass(SolidTable.IRON,1));
 
 		
 	}
@@ -72,10 +73,15 @@ public class Methoder {
 	}
 	
 	public static double volumeToMass(GasTable gas, double volume) {
-		double mass = volume*gas.density;
-		return mass;
+		double mass = volume*gas.density; // Använder samma formel som i förra uppgiften, men med gas
+		return mass; // Returnar värdet
 	}
 	
+	public static double volumeToMass(SolidTable solid, double volume) {
+		double mass = volume*solid.density; //Använder formeln P = M/V, jag formerar om den tills den blir till m = V*P, sen löser uppgiften
+		return mass; // Returnar värdet
+	}
+
 	
 	
 
