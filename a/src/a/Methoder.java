@@ -8,8 +8,8 @@ public class Methoder {
 	
 	
 	public static void main(String[] args) {
-		System.out.println(fahrenheitToCelcius(50)); // Anropar värdet för fahrenheit
-		System.out.println(kelvinToCelsius(0)); // Anropar värdet för kelvin
+		System.out.println(fahrenheitToCelcius(50)); 
+		System.out.println(kelvinToCelsius(0)); 
 		System.out.println(fluidPressure(FluidTable.WATER, 10));
 		System.out.println(pressureUnderWater(10));
 		System.out.println(kineticEnergy(2,2));
@@ -20,6 +20,7 @@ public class Methoder {
 		System.out.println(volumeToMass(GasTable.AIR,1));
 		System.out.println(volumeToMass(SolidTable.IRON,1));
 		System.out.println(svtVelocity(10,5));
+		System.out.println(svtDistance(10,5));
 
 		
 	}
@@ -88,6 +89,12 @@ public class Methoder {
 		return Velocity; // returnar värdet
 	}
 	
+	public static double svtDistance(double velocity, double time) {
+		double Distance = velocity*time; //Jag omvandlar formeln V = S/T till S = V*T
+		return Distance; // returnar värdet
+	}
+	
+
 
 	
 
