@@ -42,13 +42,18 @@ public class Methoder {
 		System.out.println(volumeToMass(SolidTable.IRON,1));
 		
 		System.out.println("Järnet väger");
-		System.out.println(volumeToMass(SolidTable.IRON,0.06));
+		System.out.println(volumeToMass(SolidTable.IRON,0.06)); //Jag omvandlar 60 DM^3 till 0.06 M^3 för att det ska passa SI-enheterna
 		
 		//Method 12
 		System.out.println(svtVelocity(10,5));
 		
 		//Method 13
 		System.out.println(svtDistance(10,5));
+		
+		System.out.println("Tomas hinner ");
+		System.out.println(svtDistance(2.7,3000)); // Omvandlar 50 minuter till sekunder för att det ska passa SI-enheterna
+		System.out.println("Meter ");
+
 		
 		//Method 14
 		System.out.println(svtTime(10,2));
