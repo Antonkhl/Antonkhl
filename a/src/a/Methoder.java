@@ -8,25 +8,64 @@ public class Methoder {
 	
 	
 	public static void main(String[] args) {
-		System.out.println(fahrenheitToCelcius(50)); 
+		//Method 1
+		System.out.println(fahrenheitToCelcius(50));
+		
+		//Method 2
 		System.out.println(kelvinToCelsius(0)); 
+		
+		//Method 3
 		System.out.println(fluidPressure(FluidTable.WATER, 10));
+		
+		//Method 4
 		System.out.println(pressureUnderWater(10));
+		
+		//Method 5
 		System.out.println(kineticEnergy(2,2));
+		
+		//Method 6
 		System.out.println(potentialEnergy(2,5));
+		
+		//Method 7
 		System.out.println(fallSpeed(2.5));
+		
+		//Method 8
 		System.out.println(delta(1,10));
+		
+		//Method 9
 		System.out.println(volumeToMass(FluidTable.WATER,1));
+		
+		//Method 10
 		System.out.println(volumeToMass(GasTable.AIR,1));
+		
+		//Method 11
 		System.out.println(volumeToMass(SolidTable.IRON,1));
+		
+		//Method 12
 		System.out.println(svtVelocity(10,5));
+		
+		//Method 13
 		System.out.println(svtDistance(10,5));
+		
+		//Method 14
 		System.out.println(svtTime(10,2));
+		
+		//Method 15
 		System.out.println(work(50,10));
+		
+		//Method 16
 		System.out.println(power(1000,2));
+		
+		//Method 17
 		System.out.println(heat(SolidTable.IRON,1,2));
+		
+		//Method 18
 		System.out.println(heat(FluidTable.WATER,1,10));
+		
+		//Method 19
 		System.out.println(heat(GasTable.AIR,1,1));
+		
+		//Method 20
 		System.out.println(velocityToHeight(9.82));
 	}
 	
