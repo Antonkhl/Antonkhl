@@ -41,6 +41,9 @@ public class Methoder {
 		//Method 11
 		System.out.println(volumeToMass(SolidTable.IRON,1));
 		
+		System.out.println("Järnet väger");
+		System.out.println(volumeToMass(SolidTable.IRON,0.06));
+		
 		//Method 12
 		System.out.println(svtVelocity(10,5));
 		
