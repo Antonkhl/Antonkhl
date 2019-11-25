@@ -54,7 +54,6 @@ public class Methoder {
 		System.out.println(svtDistance(2.7,3000)); // Omvandlar 50 minuter till sekunder för att det ska passa SI-enheterna
 		System.out.println("Meter ");
 
-		
 		//Method 14
 		System.out.println(svtTime(10,2));
 		
@@ -69,6 +68,11 @@ public class Methoder {
 		
 		//Method 18
 		System.out.println(heat(FluidTable.WATER,1,10));
+		
+		System.out.println("Det krävs");
+		System.out.println(heat(FluidTable.WATER,4,70));
+		System.out.println("joule");
+
 		
 		//Method 19
 		System.out.println(heat(GasTable.AIR,1,1));
