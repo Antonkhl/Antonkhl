@@ -20,6 +20,10 @@ public class Methoder {
 		//Method 4
 		System.out.println(pressureUnderWater(10));
 		
+		System.out.println("Trycket är");
+		System.out.println(pressureUnderWater(75)); // Använder 75 meter
+		System.out.println("N/M^2"); // Si enheten för tryck
+		
 		//Method 5
 		System.out.println(kineticEnergy(2,2));
 		
@@ -70,10 +74,9 @@ public class Methoder {
 		System.out.println(heat(FluidTable.WATER,1,10));
 		
 		System.out.println("Det krävs");
-		System.out.println(heat(FluidTable.WATER,4,70));
+		System.out.println(heat(FluidTable.WATER,4,70)); //4 liter vatten väger ungefär 4 kg, och skillnaden mellan 22 grader och kokpunkten (100) är 78.
 		System.out.println("joule");
 
-		
 		//Method 19
 		System.out.println(heat(GasTable.AIR,1,1));
 		
