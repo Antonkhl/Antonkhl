@@ -71,6 +71,10 @@ public class Methoder {
 		//Method 16
 		System.out.println(power(1000,2));
 		
+		System.out.println("Det tar");
+		System.out.println(power(721770,4.8)); // Använder först formeln W = MGH och räknar ut att det blir 721,770. Sedan deviderar det med 4.8.
+		System.out.println("Watt");
+		
 		//Method 17
 		System.out.println(heat(SolidTable.IRON,1,2));
 		
