@@ -54,6 +54,10 @@ public class Methoder {
 		//Method 13
 		System.out.println(svtDistance(10,5));
 		
+		System.out.println("Den kommer upp till");
+		System.out.println(svtDistance(16.6,10.8)); // Omvandlar 60 km/h till m/s genom att göra 60/3.6. Sedan får jag ut tiden genom att räkna ut formeln: T = S/V.
+		System.out.println("Meter");
+		
 		System.out.println("Tomas hinner ");
 		System.out.println(svtDistance(2.7,3000)); // Omvandlar 50 minuter till sekunder för att det ska passa SI-enheterna
 		System.out.println("Meter ");
