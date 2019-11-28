@@ -90,6 +90,12 @@ public class Methoder {
 		
 		//Method 20
 		System.out.println(velocityToHeight(9.82));
+		
+		//Fråga 7
+		System.out.println("den studsar");
+		System.out.println(energyToHeight(1,12));
+		System.out.println("gånger");
+
 	}
 	
 	public static double fahrenheitToCelcius(double fahrenheit) {
@@ -196,6 +202,21 @@ public class Methoder {
 	public static double velocityToHeight(double velocity) {
 		double VetoHe = (velocity*velocity)/(2*G); //Jag använder formeln MGH = mv^2, jag tar ut M vilket blir GH = v^2/2, Flyttar om G och formeln blir H = v^2/2*G
 		return VetoHe; // returnar värdet 
+	}
+	
+	public static int energyToHeight(double mass, double height) {
+		double energy = mass*G*height; // Räknar ut först energin för den i start positionen
+		int counter = 0; // skapar en counter för att hålla koll hur många gånger den då studsar 
+		
+		while (energy>4.91) { // Medans den är större än 4.91, vilket är E = 1*9.82*0.5, vilket är energin på den höjden den ska bli. ska den upprepa koden
+			energy=energy*0.99; // Den tar ut 1% från energin
+			counter++; // lägger till 1 i countern
+		}
+		// När den är då klar och while loopen inte uppfylls länger ska den hoppa till nästa 
+		
+		return counter; // här
+		
+		
 	}
 
 
