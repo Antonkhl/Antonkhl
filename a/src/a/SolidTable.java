@@ -6,7 +6,7 @@ public enum SolidTable {
 	IRON(7.87, 0.45, 1538, 276),
 	Aluminium(2.7, 0.89, 660, 0),
 	Ni(8.9, 0.4, 1455, 0),
-	
+	Guld(19.3, 0.13, 1064, 0),
 	;
 
 	double density;
