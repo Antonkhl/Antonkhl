@@ -95,6 +95,9 @@ public class Methoder {
 		System.out.println("den studsar");
 		System.out.println(energyToHeight(1,12));
 		System.out.println("gånger");
+		
+		//Fråga 8 (Vilken massa har guld om den har en densitet på 1600 kg/m3
+		System.out.println(densityToMass(SolidTable.GULD,1600));
 
 	}
 	
@@ -215,8 +218,11 @@ public class Methoder {
 		// När den är då klar och while loopen inte uppfylls länger ska den hoppa till nästa 
 		
 		return counter; // här
-		
-		
+	}
+	
+	public static double densityToMass(SolidTable solid, double volume) {
+		double mass = volume*solid.density; // Använder formeln P = M/V, vilken jag sedan omvandlar tills den blir M = V*P för att lösa uppgifter
+		return mass; //Returnar resultatet.
 	}
 
 
