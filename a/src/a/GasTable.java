@@ -6,6 +6,7 @@ public enum GasTable{
 	O2(1.43, 0.92), 
 	OXYGEN(1.43, 0.92),
 	HE(0.17, 5190),
+	N(1.2, 1040),
 	;
 
 	double density;
