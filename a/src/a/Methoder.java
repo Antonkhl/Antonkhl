@@ -5,6 +5,7 @@ public class Methoder {
 	static double G = 9.82;
 	static double p_0 = 1000;
 	static double c = 299792458;
+	static double R = 8.3;
 	
 	
 	public static void main(String[] args) {
@@ -107,112 +108,132 @@ public class Methoder {
 
 	}
 	
+	//Method 1
 	public static double fahrenheitToCelcius(double fahrenheit) {
 		double FatoCe = (fahrenheit-32)*5/9; // Använder formlen för att omvandla värden
 		return FatoCe; //Returner värdet
 	}
 	
+	//Method 2
 	public static double kelvinToCelsius(double kelvin) {
 		double KetoCe = kelvin - 273.15; // Använder formlen för att omvandla värden
 		return KetoCe; //Returnar värdet
 	}
 	
+	//Method 3
 	public static double fluidPressure(FluidTable fluid, double deep) {
 		double FluPre = G*fluid.density*deep; //Använder formeln, och jag importerar densiteten från mina enums för att använda för min method
 		return FluPre; //Returnar värdet
 		
 	}
 	
+	//Method 4 och Fråga 4 
 	public static double pressureUnderWater(double deep) {
 		double PreWat = 997*G*deep; //Här använder jag densiteten för vatten, orsak den frågar om vatten
 		return PreWat; //Returnar värdet
 	}
 		
-	
+	//Method 5
 	public static double kineticEnergy(double mass, double velocity) {
 		double KiEn = (mass*(velocity*velocity))/2; // Använder formeln, använder velocity*veolicty för det är samma som velocity^2
 		return KiEn; // Returnar värdet
 		
 	}
 	
+	//Method 6
 	public static double potentialEnergy(double mass, double height) {
 		double PoEn = mass*G*height; // Använder formlen, 
 		return PoEn; // Returnar värdet
 		
 	}
 	
+	//Method 7
 	public static double fallSpeed(double height) {
 		double FaSpe = Math.sqrt(2*G*height); // Använder formlen v^2 = 2as, jag omvandlar formeln då till v = rotenur 2as
 		return FaSpe; // Returnar värdet
 	}
 	
+	//Method 8
 	public static double delta(double first, double last) {
 		double Result = first-last; //Gör ekvationen
 		return Result; // Returnar värdet
 	}
 	
+	//Method 9
 	public static double volumeToMass(FluidTable fluid, double volume) {
 		double mass = volume*fluid.density; // Omvandlar formeln p = m/v till m = v*p.
 		return mass; // Returnar värdet
 	}
 	
+	//Method 10
 	public static double volumeToMass(GasTable gas, double volume) {
 		double mass = volume*gas.density; // Använder samma formel som i förra uppgiften, men med gas
 		return mass; // Returnar värdet
 	}
 	
+	//Method 11 och Fråga 1 
 	public static double volumeToMass(SolidTable solid, double volume) {
 		double mass = volume*solid.density; //Använder formeln P = M/V, jag formerar om den tills den blir till m = V*P, sen löser uppgiften
 		return mass; // Returnar värdet
 	}
-
+	
+	//Method 12
 	public static double svtVelocity(double distance, double time) {
 		double Velocity = distance/time; //Använder formeln V = S/T
 		return Velocity; // returnar värdet
 	}
 	
+	//Method 13, fråga 2 och fråga 5
 	public static double svtDistance(double velocity, double time) {
 		double Distance = velocity*time; //Jag omvandlar formeln V = S/T till S = V*T
 		return Distance; // returnar värdet
 	}
 	
+	//Method 14
 	public static double svtTime(double distance, double velocity) {
 		double Time = distance/velocity; // Omvandlar formeln V = S/T till  T = S/V
 		return Time; // returnar värdet 
 	}
 	
+	//Method 15
 	public static double work(double force, double distance) {
 		double work = force*distance; // Använder formeln = W = Fs * s
 		return work; // returnar värdet 
 	}
 	
+	//Method 16 och Fråga 6
 	public static double power(double work, double time) {
 		double power = work/time; // Använder formeln F = W * T
 		return power; // returnar värdet 
 		
 	}
 	
+	//Method 17
 	public static double heat(SolidTable solid, double mass, double DeltaT) {
 		double heat = solid.heatCapacity*mass*DeltaT; // Använder formeln E = c * m * DeltaT, där c är värmecapiciteten
 		return heat; // returnar värdet 
 	}
 	
+	//Method 18, Fråga 3
 	public static double heat(FluidTable fluid, double mass, double deltaT) {
 		double heat =  fluid.heatCapacity*mass*deltaT; // Använder formeln E = c * m * DeltaT, där c är värmecapiciteten
 		return heat; // returnar värdet 
 	}
 	
+	//Method 19
 	public static double heat(GasTable gas, double mass, double deltaT) {
 		double heat = gas.heatCapacity*mass*deltaT; // Använder formeln E = c * m * DeltaT, där c är värmecapiciteten
 		return heat; // returnar värdet 
 		
 	}
 	
+	//Method 20
 	public static double velocityToHeight(double velocity) {
 		double VetoHe = (velocity*velocity)/(2*G); //Jag använder formeln MGH = mv^2, jag tar ut M vilket blir GH = v^2/2, Flyttar om G och formeln blir H = v^2/2*G
 		return VetoHe; // returnar värdet 
 	}
 	
+	//Fråga 7
 	public static int energyToHeight(double mass, double height) {
 		double energy = mass*G*height; // Räknar ut först energin för den i start positionen
 		int counter = 0; // skapar en counter för att hålla koll hur många gånger den då studsar 
@@ -226,16 +247,19 @@ public class Methoder {
 		return counter; // här returnar jag antal gånger den studsar
 	}
 	
+	//Fråga 8
 	public static double densityToMass(SolidTable solid, double volume) {
 		double mass = volume*solid.density; // Använder formeln P = M/V, vilken jag sedan omvandlar tills den blir M = V*P för att lösa uppgifter
 		return mass; //Returnar resultatet.
 	}
-
+	
+	//Fråga 9
 	public static double EtanolFluidPressure (FluidTable fluid, double deep) {
 		double fluidPressure = G*fluid.density*deep; //Använder formeln för att räkna ut vätsketrycket för etanol, impoterar då densiteten för den från  fluidtable
 		return fluidPressure; // Returnar värdet
 	}
 	
+	//Fråga 10
 	public static double bicycleMomentum(double mass, double distance, double time) {
 		double velocity = distance/time; // Räknar ut först medelhastigheten för cykeln
 		double momentum = velocity*mass; //Räknar ut rörelsemängden
