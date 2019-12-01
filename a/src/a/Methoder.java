@@ -96,8 +96,11 @@ public class Methoder {
 		System.out.println(energyToHeight(1,12));
 		System.out.println("gånger");
 		
-		//Fråga 8 (Vilken massa har guld om den har en densitet på 1600 kg/m3
+		//Fråga 8 (Vilken massa har guld om den har en densitet på 1600 kg/m3)
 		System.out.println(densityToMass(SolidTable.GULD,1600));
+		
+		//Fråga 9 (Vad är vätsketrycket hos etanol i 20 meters djup?)
+		System.out.println(EtanolFluidPressure(FluidTable.Etanol,20));
 
 	}
 	
@@ -217,7 +220,7 @@ public class Methoder {
 		}
 		// När den är då klar och while loopen inte uppfylls länger ska den hoppa till nästa 
 		
-		return counter; // här
+		return counter; // här returnar jag antal gånger den studsar
 	}
 	
 	public static double densityToMass(SolidTable solid, double volume) {
@@ -225,6 +228,10 @@ public class Methoder {
 		return mass; //Returnar resultatet.
 	}
 
+	public static double EtanolFluidPressure (FluidTable fluid, double deep) {
+		double fluidPressure = G*fluid.density*deep; //Använder formeln för att räkna ut vätsketrycket för etanol, impoterar då densiteten för den från  fluidtable
+		return fluidPressure; // Returnar värdet
+	}
 
 	
 
