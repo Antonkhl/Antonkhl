@@ -101,6 +101,9 @@ public class Methoder {
 		
 		//Fråga 9 (Vad är vätsketrycket hos etanol i 20 meters djup?)
 		System.out.println(EtanolFluidPressure(FluidTable.Etanol,20));
+		
+		//Fråga 10 (Vad är rörelsemängden hos en cykel som väger 17.2kg som kör 10 meter i 5 sekunder?)
+		System.out.println(bicycleMomentum(17.2,10,5));
 
 	}
 	
@@ -231,6 +234,12 @@ public class Methoder {
 	public static double EtanolFluidPressure (FluidTable fluid, double deep) {
 		double fluidPressure = G*fluid.density*deep; //Använder formeln för att räkna ut vätsketrycket för etanol, impoterar då densiteten för den från  fluidtable
 		return fluidPressure; // Returnar värdet
+	}
+	
+	public static double bicycleMomentum(double mass, double distance, double time) {
+		double velocity = distance/time; // Räknar ut först medelhastigheten för cykeln
+		double momentum = velocity*mass; //Räknar ut rörelsemängden
+		return momentum; //returnar värdet
 	}
 
 	
