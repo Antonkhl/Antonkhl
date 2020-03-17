@@ -1,13 +1,17 @@
 public class talspelet {
 
 	public static void main(String[] args) {
+		System.out.println(playersName());
+		System.out.println(minMaxNumbers());
+		System.out.println(limitOnTries());
 		
+
 	}
 	
 	
 	
 	public static String playersName() {
-		
+		System.out.println("Hej och välkommen till mitt talspel! Idag ska vi få se om du har vad som krävs för att gissa tal, men innan vi börjar, vad heter du?");
 	}
 	
 	public static int minMaxNumbers() {
@@ -18,11 +22,12 @@ public class talspelet {
 		
 	}
 	
+	
     public static void mainGame() {
 		
 	}
     
-    public static afterGame() {
+    public static void afterGame() {
     	
     }
     
