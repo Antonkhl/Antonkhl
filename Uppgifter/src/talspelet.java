@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class talspelet {
 
 	public static void main(String[] args) {
@@ -12,6 +14,10 @@ public class talspelet {
 	
 	public static String playersName() {
 		System.out.println("Hej och välkommen till mitt talspel! Idag ska vi få se om du har vad som krävs för att gissa tal, men innan vi börjar, vad heter du?");
+		Scanner input = new Scanner(System.in);
+		String namn = input.nextLine();
+		System.out.println("Hej" + namn + "och jag hoppas att du har det roligt!");
+		return namn;
 	}
 	
 	public static int minMaxNumbers() {
