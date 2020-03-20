@@ -35,14 +35,14 @@ public class talspelet {
 	}
 	
 	public static String limitOnTries(String limit) {
-		String svar1 = "Nej";
-		String svar2 = "Ja";
+		String svar1 = "Ja";
+		String svar2 = "Nej";
 		
 		System.out.println("Vill du ha begränsningar på försök? (Ja/Nej)");
 		Scanner input = new Scanner(System.in);
 		limit = input.nextLine();
 		
-		if (limit = svar1) {
+		if (limit.equals(svar1)) {
 			
 		}
 	}
