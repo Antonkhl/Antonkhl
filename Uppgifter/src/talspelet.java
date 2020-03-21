@@ -5,7 +5,6 @@ public class talspelet {
 	public static void main(String[] args) {
 		System.out.println(playersName("name"));
 		System.out.println(minMaxNumbers(3, 4));
-		System.out.println(limitOnTries("limit"));
 		
 
 	}
@@ -34,17 +33,30 @@ public class talspelet {
 		
 	}
 	
-	public static String limitOnTries(String limit) {
+	public static void limitOnTries(int numberOfTries) {
 		String svar1 = "Ja";
 		String svar2 = "Nej";
+
 		
 		System.out.println("Vill du ha begränsningar på försök? (Ja/Nej)");
 		Scanner input = new Scanner(System.in);
-		limit = input.nextLine();
+		String limit = input.nextLine();
 		
 		if (limit.equals(svar1)) {
-			
+	    System.out.println("Ok! Hur många försök vill du ha på dig?");
+	    numberOfTries = input.nextInt();
+	   
 		}
+		
+		if (limit.equals(svar2)) {
+			System.out.println("Ok, då går vi vidare!");
+		}
+		
+		else {
+			System.out.println("Jag vill att du svarar Ja eller Nej");
+		}
+		
+		
 	}
 	
 	
