@@ -94,14 +94,18 @@ public class talspelet {
 			System.out.println("Du har " + triesleft + "Försök kvar");
 		}
 		
-		afterGame()
+		afterGame(namn, triesleft, tries, slumptal, numberOfTries);
 		
 		
 		
     	
 	}
     
-    public static void afterGame(String namn) {
+    public static void afterGame(String namn, int triesleft, int tries, int slumptal, int numberOfTries) {
+    	System.out.println("Nu är spelet slut!, talet var" + slumptal);
+    	System.out.println("Det tog dig " + tries + "försök av möjliga " + numberOfTries + "försök. Du hade" + triesleft + "kvar");
+    	System.out.println("Nu" + namn + "Skulle du vilja köra spelet igen?");
+    	
     	
     }
     
