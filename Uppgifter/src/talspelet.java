@@ -59,13 +59,13 @@ public class talspelet {
 			System.out.println("Jag vill att du svarar Ja eller Nej");
 		}
 		
-		mainGame(0,namn,numberOfTries,slumpTal,0);
+		mainGame(0,namn,numberOfTries,slumpTal,0,0,0,0);
 		
 		
 	}
 	
 	
-    public static void mainGame(int gissning, String namn, int numberOfTries, int slumptal, int substration) {
+    public static void mainGame(int gissning, String namn, int numberOfTries, int slumptal, int substration, int tries, int triesThatTook, int triesleft) {
 		System.out.println("Ok Innan vi börjar ska jag berätta för dig exakt hur spelet fungerar, "
 				+ "Jag kommer att slumpa ett tal mellan ditt minnumber och maxnumber, "
 				+ "Du ska gissa ett tal mellan dom två intervaler och beroende på det talet du gissar kommer jag antigen säga mindre eller mer"
@@ -73,9 +73,11 @@ public class talspelet {
 				+ "När spelet är slut kommer jag ger dig all statistik som du behöver"
 				+ "Med det sagt, kan vi köra igång!");
 		Scanner input = new Scanner(System.in); 
-		gissning = input.nextInt();
+		triesThatTook = numberOfTries;
+	
 		
-		while (gissning != slumptal ) {
+		while (gissning != slumptal || tries != numberOfTries) {
+			gissning = input.nextInt();
 			substration = gissning - slumptal;
 			
 			if (substration>0) {
@@ -83,23 +85,23 @@ public class talspelet {
 			}
 			
 			if (substration<0) {
-				System.out.println("Mer")
+				System.out.println("Mer");
 			}
 			
-			
-			
-			
+			tries++;
+			triesThatTook--;
+			triesleft = numberOfTries-triesThatTook;
+			System.out.println("Du har " + triesleft + "Försök kvar");
 		}
 		
+		afterGame()
 		
 		
 		
-    	
-    	
     	
 	}
     
-    public static void afterGame() {
+    public static void afterGame(String namn) {
     	
     }
     
