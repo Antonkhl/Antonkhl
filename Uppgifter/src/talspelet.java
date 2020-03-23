@@ -104,8 +104,23 @@ public class talspelet {
     public static void afterGame(String namn, int triesleft, int tries, int slumptal, int numberOfTries) {
     	System.out.println("Nu är spelet slut!, talet var" + slumptal);
     	System.out.println("Det tog dig " + tries + "försök av möjliga " + numberOfTries + "försök. Du hade" + triesleft + "kvar");
-    	System.out.println("Nu" + namn + "Skulle du vilja köra spelet igen?");
+    	System.out.println("Nu" + namn + "Skulle du vilja köra spelet igen? (Ja/Nej)");
+    	Scanner input = new Scanner(System.in); 
+    	String svar1 = "Ja";
+    	String svar2 = "Nej";
+    	String svar = input.nextLine();
     	
+    	if(svar.equals(svar1)) {
+    		minMaxNumbers(namn,0,0,0);
+    	}
+    	
+    	if(svar.equals(svar2)) {
+    	   return;
+    	}
+    	
+    	else {
+    		System.out.println("Jag vill ha antigen en Ja eller Nej!");
+    	}
     	
     }
     
