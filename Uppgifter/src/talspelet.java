@@ -1,10 +1,12 @@
 import java.util.Scanner;
 import java.util.Random;
 
+
 public class talspelet {
 	
 	public static void main(String[] args) {
 		playersName("name");
+		//Anger vilket method jag vill se börja med
 	}
 	
 	
@@ -16,6 +18,7 @@ public class talspelet {
 		System.out.println("Hej " + namn + "! och jag hoppas att du kommer ha det kul");
 		
 		minMaxNumbers(namn,0,0,0);
+		//Jag anger den nästa methoden som programet ska till, dessutom sparar jag värden i methoden som jag kan sen använda igen
 		
 
 	}
@@ -33,6 +36,7 @@ public class talspelet {
 	    
 	    Random random = new Random();
 	    slumpTal = random.nextInt(maxNumber - minNumber +1) + minNumber;
+	    //Slumpar talet, orsak för minnumber och +1 är då för att säkerställa att det är mellan dom två intervaler och into 0-10 eller något.
 	    
 	    limitOnTries(0,namn,slumpTal);
 	    
@@ -44,7 +48,8 @@ public class talspelet {
 	public static void limitOnTries(int numberOfTries, String namn, int slumpTal) {
 		String svar1 = "Ja";
 		String svar2 = "Nej";
-
+		//Jag förbereder dom två svaren jag vill ha
+		
 		
 		System.out.println("Vill du ha begränsningar på försök? (Ja/Nej)");
 		Scanner input = new Scanner(System.in);
@@ -63,10 +68,14 @@ public class talspelet {
 		
 		}
 		
+		// Jag förbereder två olika methoder för dom två olika val spelaren har, maingame1 vilket är då om spelaren vill ha en begränsning på försök och maingame2 vilket är då om spelaren inte vill ha det.
+		//Använder limit.equals för att jämföra svaren. 
+		
 		else {
 			System.out.println("Jag vill att du svarar Ja eller Nej");
 			limitOnTries(0,namn,slumpTal);
 		}
+		//Om spelaren svarar något som inte är Ja eller Nej ville jag att spelet skulle startas om, vilket är vad som händer här
 		
 
 
@@ -84,9 +93,9 @@ public class talspelet {
 
 		Scanner input = new Scanner(System.in); 
 		
-		while (gissning != slumptal) {
+		while (gissning != slumptal) { //Loop för att det ska upprepas tills talet hittas
 			gissning = input.nextInt();
-			substration = gissning - slumptal;
+			substration = gissning - slumptal; // Enkel ekvation, om substrationen blir under 0 då betyder det att talet är för stor och om det blir över 0 då betyder det att den är för liten, vilket är varför jag gjorde en sån system 
 			
 			if (substration>0) {
 				System.out.println("mindre");
@@ -98,8 +107,9 @@ public class talspelet {
 			tries++;
 			
 			if (substration == 0) {
-				afterGame2(namn, tries, slumptal);
+				afterGame2(namn, tries, slumptal); //När talet har då hittas ska aftergame methoden anges
 			}
+			
 		}
 	}
 	
@@ -132,9 +142,8 @@ public class talspelet {
 			
 			
 			tries++;
-			triesThatTook--;
-			triesleft = numberOfTries-tries;
-			System.out.println("Du har " + triesleft + " Försök kvar");
+			triesleft = numberOfTries-tries; //En räknare för att se hur många försök spelaren har kvar 
+			System.out.println("Du har " + triesleft + " Försök kvar"); //informerar hur många försök spelaren har kvar
 			if (substration == 0 || tries == numberOfTries) {
 				afterGame(namn, triesleft, tries, slumptal, numberOfTries);
 			}
@@ -147,21 +156,27 @@ public class talspelet {
     public static void afterGame(String namn, int triesleft, int tries, int slumptal, int numberOfTries) {
     	System.out.println("Nu är spelet slut!, talet var " + slumptal);
     	System.out.println("Det tog dig " + tries + " försök av möjliga " + numberOfTries + " försök. Du hade " + triesleft + " kvar");
-    	System.out.println("Nu " + namn + " Skulle du vilja köra spelet igen? (Ja/Nej)");
+    	System.out.println("Nu " + namn + " Skulle du vilja köra spelet igen? (Ja/Nej)"); 
+    	//all statistik om spelet
+    	
     	Scanner input = new Scanner(System.in); 
     	String svar1 = "Ja";
-    	String svar2 = "Nej";
+    	String svar2 = "Nej"; 
     	String svar = input.nextLine();
+    	
+    	//Dom två svar som jag vill ha från spelaren
     	
     	if(svar.equals(svar1)) {
     		playersName(namn);
     	}
+    	//Spelet ska börja om från först början om spelaren svarar ja på frågan
     	
     	if(svar.equals(svar2)) {
     	   System.out.println("Ok! Ha det så bra!");
     	   System.exit(0);
-    	  
+
     	}
+    	//Om spelaren svarar nej ska spelet avslutas, vilket är varför jag har system exit som terminatar programet.
     	
     	else {
     		System.out.println("Jag vill ha antigen en Ja eller Nej!");
