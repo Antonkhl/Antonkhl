@@ -3,12 +3,17 @@ import java.util.Random;
 
 public class talspelet {
 	
+	public static void main(String[] args) {
+		playersName("name");
+	}
+	
+	
 	
 	public static void playersName(String namn) {
 		System.out.println("Hej och välkommen till mitt talspel! Idag ska vi få se om du har vad som krävs för att gissa tal, men innan vi börjar, vad heter du?");
 		Scanner input = new Scanner(System.in);
 	    namn = input.nextLine();
-		System.out.println("Hej" + namn + "och jag hoppas att du har det roligt!");
+		System.out.println("Hej " + namn + " och jag hoppas att du har det roligt!");
 		
 		minMaxNumbers(namn,0,0,0);
 		
@@ -36,8 +41,8 @@ public class talspelet {
 	}
 	
 	public static void limitOnTries(int numberOfTries, String namn, int slumpTal) {
-		String svar1 = "Ja";
-		String svar2 = "Nej";
+		String svar1 = "ja";
+		String svar2 = "nej";
 
 		
 		System.out.println("Vill du ha begränsningar på försök? (Ja/Nej)");
@@ -47,19 +52,22 @@ public class talspelet {
 		if (limit.equals(svar1)) {
 	    System.out.println("Ok! Hur många försök vill du ha på dig?");
 	    numberOfTries = input.nextInt();
+		mainGame(0,namn,numberOfTries,slumpTal,0,0,0,0);
 	   
 		}
 		
 		if (limit.equals(svar2)) {
 			System.out.println("Ok " + namn + ", då går vi vidare!");
 			numberOfTries = 3251;
+			mainGame(0,namn,numberOfTries,slumpTal,0,0,0,0);
 		}
 		
 		else {
 			System.out.println("Jag vill att du svarar Ja eller Nej");
+			limitOnTries(0,namn,slumpTal);
 		}
 		
-		mainGame(0,namn,numberOfTries,slumpTal,0,0,0,0);
+
 		
 		
 	}
@@ -71,7 +79,7 @@ public class talspelet {
 				+ "Du ska gissa ett tal mellan dom två intervaler och beroende på det talet du gissar kommer jag antigen säga mindre eller mer"
 				+ "Om du har begränsning på försök kommer jag ochså meddela hur många försök du har kvar"
 				+ "När spelet är slut kommer jag ger dig all statistik som du behöver"
-				+ "Med det sagt, kan vi köra igång!");
+				+ "Med det sagt, kan vi köra igång! Du kan börja med att gissa ett tal!");
 		Scanner input = new Scanner(System.in); 
 		triesThatTook = numberOfTries;
 	
@@ -88,13 +96,20 @@ public class talspelet {
 				System.out.println("Mer");
 			}
 			
+			
+			
 			tries++;
 			triesThatTook--;
-			triesleft = numberOfTries-triesThatTook;
-			System.out.println("Du har " + triesleft + "Försök kvar");
+			triesleft = numberOfTries-tries;
+			System.out.println("Du har " + triesleft + " Försök kvar");
+			if (substration == 0 || tries == numberOfTries) {
+				afterGame(namn, triesleft, tries, slumptal, numberOfTries);
+			}
 		}
 		
-		afterGame(namn, triesleft, tries, slumptal, numberOfTries);
+
+			
+	
 		
 		
 		
@@ -102,20 +117,22 @@ public class talspelet {
 	}
     
     public static void afterGame(String namn, int triesleft, int tries, int slumptal, int numberOfTries) {
-    	System.out.println("Nu är spelet slut!, talet var" + slumptal);
-    	System.out.println("Det tog dig " + tries + "försök av möjliga " + numberOfTries + "försök. Du hade" + triesleft + "kvar");
-    	System.out.println("Nu" + namn + "Skulle du vilja köra spelet igen? (Ja/Nej)");
+    	System.out.println("Nu är spelet slut!, talet var " + slumptal);
+    	System.out.println("Det tog dig " + tries + " försök av möjliga " + numberOfTries + " försök. Du hade " + triesleft + " kvar");
+    	System.out.println("Nu " + namn + " Skulle du vilja köra spelet igen? (Ja/Nej)");
     	Scanner input = new Scanner(System.in); 
     	String svar1 = "Ja";
     	String svar2 = "Nej";
     	String svar = input.nextLine();
     	
     	if(svar.equals(svar1)) {
-    		minMaxNumbers(namn,0,0,0);
+    		playersName(namn);
     	}
     	
     	if(svar.equals(svar2)) {
-    	   return;
+    	   System.out.println("Ok! Ha det så bra!");
+    	   System.exit(0);
+    	  
     	}
     	
     	else {
@@ -123,6 +140,8 @@ public class talspelet {
     	}
     	
     }
+    
+
     
 	
 
