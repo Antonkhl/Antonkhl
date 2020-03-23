@@ -10,10 +10,10 @@ public class talspelet {
 	
 	
 	public static void playersName(String namn) {
-		System.out.println("Hej och välkommen till mitt talspel! Idag ska vi få se om du har vad som krävs för att gissa tal, men innan vi börjar, vad heter du?");
+		System.out.println("Hej och välkommen till mitt talspel! Idag ska vi se om du har vad som krävs för att gissa tal, men innan vi börjar, vad heter du?");
 		Scanner input = new Scanner(System.in);
 	    namn = input.nextLine();
-		System.out.println("Hej " + namn + " och jag hoppas att du har det roligt!");
+		System.out.println("Hej " + namn + "! och jag hoppas att du kommer ha det kul");
 		
 		minMaxNumbers(namn,0,0,0);
 		
@@ -21,7 +21,8 @@ public class talspelet {
 	}
 	
 	public static void minMaxNumbers(String namn, int minNumber, int maxNumber, int slumpTal) {
-		System.out.println("Innan jag berättar regler för spelet vill jag att ni anger max och min tal för spelet. Det är mellan dessa två tal som talet kommer slumpas mellan");
+		System.out.println("Innan jag berättar reglerna för dig vill jag att ni anger max och min tal för spelet");
+		System.out.println("Det är mellan de två tal som talet kommer slumpas");
 		
 		System.out.println("Börja med att ange mintalet");
 		Scanner input = new Scanner(System.in);
@@ -74,12 +75,13 @@ public class talspelet {
 	
 	
 	public static void mainGame2(int gissning, String namn, int slumptal, int substration, int tries) {
-		System.out.println("Ok Innan vi börjar ska jag berätta för dig exakt hur spelet fungerar, "
-				+ "Jag kommer att slumpa ett tal mellan ditt minnumber och maxnumber, "
-				+ "Du ska gissa ett tal mellan dom två intervaler och beroende på det talet du gissar kommer jag antigen säga mindre eller mer"
-				+ "Om du har begränsning på försök kommer jag ochså meddela hur många försök du har kvar"
-				+ "När spelet är slut kommer jag ger dig all statistik som du behöver"
-				+ "Med det sagt, kan vi köra igång! Du kan börja med att gissa ett tal!");
+		System.out.println("Ok Innan vi börjar ska jag berätta för dig exakt hur spelet fungerar");
+		System.out.println("Jag kommer att slumpa ett tal mellan ditt minnumber och maxnumber");
+		System.out.println("Ditt jobb är att gissa mellan dom två intervaller och beroende på vilket tal du gissar kommer jag antigen säga mer eller mindre");
+		System.out.println("När spelet är slut kommer jag ge dig all statistik om spelet som du behöver");
+		System.out.println("Med det sagt, kan vi köra igång!");
+		System.out.println("Gissa på ett tal mellan dina två intervaler");
+
 		Scanner input = new Scanner(System.in); 
 		
 		while (gissning != slumptal) {
@@ -103,12 +105,14 @@ public class talspelet {
 	
 	
     public static void mainGame1(int gissning, String namn, int numberOfTries, int slumptal, int substration, int tries, int triesThatTook, int triesleft) {
-		System.out.println("Ok Innan vi börjar ska jag berätta för dig exakt hur spelet fungerar, "
-				+ "Jag kommer att slumpa ett tal mellan ditt minnumber och maxnumber, "
-				+ "Du ska gissa ett tal mellan dom två intervaler och beroende på det talet du gissar kommer jag antigen säga mindre eller mer"
-				+ "Om du har begränsning på försök kommer jag ochså meddela hur många försök du har kvar"
-				+ "När spelet är slut kommer jag ger dig all statistik som du behöver"
-				+ "Med det sagt, kan vi köra igång! Du kan börja med att gissa ett tal!");
+    	System.out.println("Ok Innan vi börjar ska jag berätta för dig exakt hur spelet fungerar");
+		System.out.println("Jag kommer att slumpa ett tal mellan ditt minnumber och maxnumber");
+		System.out.println("Ditt jobb är att gissa mellan dom två intervaller och beroende på vilket tal du gissar kommer jag antigen säga mer eller mindre");
+		System.out.println("Dessutom kommer jag ochså meddela dig hur många försök du har kvar");
+		System.out.println("När spelet är slut kommer jag ge dig all statistik om spelet som du behöver");
+		System.out.println("Med det sagt, kan vi köra igång!");
+		System.out.println("Gissa på ett tal mellan dina två intervaler");
+		
 		Scanner input = new Scanner(System.in); 
 		triesThatTook = numberOfTries;
 	
@@ -118,7 +122,7 @@ public class talspelet {
 			substration = gissning - slumptal;
 			
 			if (substration>0) {
-				System.out.println("mindre");
+				System.out.println("Mindre");
 			}
 			
 			if (substration<0) {
