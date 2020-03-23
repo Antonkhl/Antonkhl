@@ -41,8 +41,8 @@ public class talspelet {
 	}
 	
 	public static void limitOnTries(int numberOfTries, String namn, int slumpTal) {
-		String svar1 = "ja";
-		String svar2 = "nej";
+		String svar1 = "Ja";
+		String svar2 = "Nej";
 
 		
 		System.out.println("Vill du ha begränsningar på försök? (Ja/Nej)");
@@ -52,14 +52,14 @@ public class talspelet {
 		if (limit.equals(svar1)) {
 	    System.out.println("Ok! Hur många försök vill du ha på dig?");
 	    numberOfTries = input.nextInt();
-		mainGame(0,namn,numberOfTries,slumpTal,0,0,0,0);
+		mainGame1(0,namn,numberOfTries,slumpTal,0,0,0,0);
 	   
 		}
 		
 		if (limit.equals(svar2)) {
 			System.out.println("Ok " + namn + ", då går vi vidare!");
-			numberOfTries = 3251;
-			mainGame(0,namn,numberOfTries,slumpTal,0,0,0,0);
+		mainGame2(0,namn,slumpTal,0,0);
+		
 		}
 		
 		else {
@@ -68,12 +68,41 @@ public class talspelet {
 		}
 		
 
-		
+
 		
 	}
 	
 	
-    public static void mainGame(int gissning, String namn, int numberOfTries, int slumptal, int substration, int tries, int triesThatTook, int triesleft) {
+	public static void mainGame2(int gissning, String namn, int slumptal, int substration, int tries) {
+		System.out.println("Ok Innan vi börjar ska jag berätta för dig exakt hur spelet fungerar, "
+				+ "Jag kommer att slumpa ett tal mellan ditt minnumber och maxnumber, "
+				+ "Du ska gissa ett tal mellan dom två intervaler och beroende på det talet du gissar kommer jag antigen säga mindre eller mer"
+				+ "Om du har begränsning på försök kommer jag ochså meddela hur många försök du har kvar"
+				+ "När spelet är slut kommer jag ger dig all statistik som du behöver"
+				+ "Med det sagt, kan vi köra igång! Du kan börja med att gissa ett tal!");
+		Scanner input = new Scanner(System.in); 
+		
+		while (gissning != slumptal) {
+			gissning = input.nextInt();
+			substration = gissning - slumptal;
+			
+			if (substration>0) {
+				System.out.println("mindre");
+			}
+			
+			if (substration<0) {
+				System.out.println("Mer");
+			}
+			tries++;
+			
+			if (substration == 0) {
+				afterGame2(namn, tries, slumptal);
+			}
+		}
+	}
+	
+	
+    public static void mainGame1(int gissning, String namn, int numberOfTries, int slumptal, int substration, int tries, int triesThatTook, int triesleft) {
 		System.out.println("Ok Innan vi börjar ska jag berätta för dig exakt hur spelet fungerar, "
 				+ "Jag kommer att slumpa ett tal mellan ditt minnumber och maxnumber, "
 				+ "Du ska gissa ett tal mellan dom två intervaler och beroende på det talet du gissar kommer jag antigen säga mindre eller mer"
@@ -107,13 +136,8 @@ public class talspelet {
 			}
 		}
 		
-
-			
-	
 		
 		
-		
-    	
 	}
     
     public static void afterGame(String namn, int triesleft, int tries, int slumptal, int numberOfTries) {
@@ -140,6 +164,31 @@ public class talspelet {
     	}
     	
     }
+    
+    public static void afterGame2(String namn, int tries, int slumptal) {
+    	System.out.println("Nu är spelet slut!, talet var " + slumptal);
+    	System.out.println("Det tog dig " + tries + " Försök");
+    	System.out.println("Nu " + namn + " Skulle du vilja köra spelet igen? (Ja/Nej)");
+    	Scanner input = new Scanner(System.in); 
+    	String svar1 = "Ja";
+    	String svar2 = "Nej";
+    	String svar = input.nextLine();
+    	
+    	if(svar.equals(svar1)) {
+    		playersName(namn);
+    	}
+    	
+    	if(svar.equals(svar2)) {
+    	   System.out.println("Ok! Ha det så bra!");
+    	   System.exit(0);
+    	  
+    	}
+    	
+    	else {
+    		System.out.println("Jag vill ha antigen en Ja eller Nej!");
+    	}
+    }
+    
     
 
     
